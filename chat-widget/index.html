@@ -3,18 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Chat Widget</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
+  <link rel='stylesheet prefetch' href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Poiret+One'>
   
 </head>
 
+
 <body>
-    <div class="container clearfix">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">공부하Share</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/index_cardboard.html" id="home">HOME</a></li>
+        <li><a href="/index.html">강좌목록</a></li>
+        <li><a href="#">즐겨찾기</a></li>
+        <li><a href="#">LOGOUT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container clearfix">
     <div class="people-list" id="people-list">
       <div class="search">
         <input type="text" placeholder="search" />
@@ -24,9 +48,9 @@
         <li class="clearfix" id="km">
           <img src="img/student1.png" alt="avatar" />
           <div class="about">
-            <div class="name">C언어, C++</div>
+            <div class="name">어려운 C언어, C++!! 저랑 같이 즐겁게 공부해봐요~</div>
             <div class="status">
-              <i class="fa fa-circle online"></i> 독일어,일본어랑 교환
+              <i class="fa fa-circle online"></i> 독일어,일본어랑 교환가능합니다
             </div>
           </div>
         </li>
@@ -34,9 +58,9 @@
         <li class="clearfix" id="sb">
           <img src="img/student2.png" alt="avatar" />
           <div class="about">
-            <div class="name">김수빈</div>
+            <div class="name">케이퐙스타 출신 김수방과 함께하는 🎼노래🎼교실</div>
             <div class="status">
-              <i class="fa fa-circle offline"></i> left 7 mins ago
+              <i class="fa fa-circle offline"></i> 일반물리학과 교환해요
             </div>
           </div>
         </li>
@@ -44,9 +68,9 @@
         <li class="clearfix">
           <img src="img/student3.png" alt="avatar" />
           <div class="about">
-            <div class="name">김은지</div>
+            <div class="name">💕메이크업장인!!! 새내기 뺨치는 메이크업 이미지변신해봐요😍</div>
             <div class="status">
-              <i class="fa fa-circle online"></i> online
+              <i class="fa fa-circle online"></i> 회계 가능하신분
             </div>
           </div>
         </li>
@@ -123,120 +147,111 @@
       </ul>
     </div>
     
-    <div class="chat">
-      <div class="chat-header clearfix" id="km_avatar">
-        <img src="img/student1.png" alt="avatar" />
-        
-        <div class="chat-about">
-          <div class="chat-with">Chat with 조경미</div>
-          <div class="chat-num-messages">C언어 C++프로그래밍 가능합니다</div>
-        </div>
-        <i class="fa fa-star"></i>
-      </div> <!-- end chat-header -->
+    <div class="chat" id="chat-list">
+      <div class="km_class">
+        <div class="chat-header clearfix" id="km_avatar">
+          <img src="img/student1.png" alt="avatar" />
 
-      <div class="chat-header clearfix" id="sb_avatar">
-        <img src="img/student2.png" alt="avatar" />
+          <div class="chat-about">
+            <div class="chat-with">Chat with 조경미</div>
+            <div class="chat-num-messages">C언어 C++프로그래밍 가능합니다</div>
+          </div>
+          <i class="fa fa-star"></i>
+        </div> <!-- end chat-header -->
+        <div class="chat-history" id="km_chat">
+          <ul>
+            <li class="clearfix">
+              <div class="message-data align-right">
+                <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
+                <span class="message-data-name" >Tricks</span> <i class="fa fa-circle me"></i>
 
-        <div class="chat-about">
-          <div class="chat-with">Chat with 김수빈</div>
-          <div class="chat-num-messages">C언어 C++프로그래밍 가능합니다</div>
-        </div>
-        <i class="fa fa-star"></i>
-      </div> <!-- end chat-header -->
-      
-      <div class="chat-history" id="km_chat">
-        <ul>
-          <li class="clearfix">
-            <div class="message-data align-right">
-              <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-              <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
-              
-            </div>
-            <div class="message other-message float-right">
-              안녕하세요 C언어 배우고싶어서 연락드렸어요~~ 저는 독어독문학과라서 독일어로 교환학습원해요
-            </div>
-          </li>
-          
-          <li>
-            <div class="message-data">
-              <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-              <span class="message-data-time">10:12 AM, Today</span>
-            </div>
-            <div class="message my-message">
-              아ㅎㅎ네 가능한 시간과 요일을 말해주세요
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <div class="message-data align-right">
-              <span class="message-data-time" >10:14 AM, Today</span> &nbsp; &nbsp;
-              <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
-              
-            </div>
-            <div class="message other-message float-right">
-              저는 월수는 3시수업이 마지막 수업이고 화목은 4시반 수업이 마지막이예요!!
-            </div>
-          </li>
-          
-          <li>
-            <div class="message-data">
-              <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-              <span class="message-data-time">10:20 AM, Today</span>
-            </div>
-            <div class="message my-message">
+              </div>
+              <div class="message other-message float-right">
+                안녕하세요 C언어 배우고싶어서 연락드렸어요~~ 저는 독어독문학과라서 독일어로 교환학습원해요
+              </div>
+            </li>
 
-            </div>
-          </li>
-          
-          <li>
-            <div class="message-data">
-              <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-              <span class="message-data-time">10:31 AM, Today</span>
-            </div>
-            <i class="fa fa-circle online"></i>
-            <i class="fa fa-circle online" style="color: #AED2A6"></i>
-            <i class="fa fa-circle online" style="color:#DAE9DA"></i>
-          </li>
-          
-        </ul>
-        
-      </div> <!-- end chat-history -->
+            <li>
+              <div class="message-data">
+                <span class="message-data-name"><i class="fa fa-circle online"></i> 조경미</span>
+                <span class="message-data-time">10:12 AM, Today</span>
+              </div>
+              <div class="message my-message">
+                아ㅎㅎ네 가능한 시간과 요일을 말해주세요
+              </div>
+            </li>
 
-      <div class="chat-history" id="sb_chat">
-        <ul>
-          <li class="clearfix">
-            <div class="message-data align-right">
-              <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-              <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+            <li class="clearfix">
+              <div class="message-data align-right">
+                <span class="message-data-time" >10:14 AM, Today</span> &nbsp; &nbsp;
+                <span class="message-data-name" >Tricks</span> <i class="fa fa-circle me"></i>
 
-            </div>
-            <div class="message other-message float-right">
-              안녕하세요 일물배우고싶어용
-            </div>
-          </li>
+              </div>
+              <div class="message other-message float-right">
+                저는 월수는 3시수업이 마지막 수업이고 화목은 4시반 수업이 마지막이예요!!
+              </div>
+            </li>
 
-          <li>
-            <div class="message-data">
-              <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-              <span class="message-data-time">10:12 AM, Today</span>
-            </div>
-            <div class="message my-message">
-              뿡빵뿡빵
-            </div>
-          </li>
-          <!--<li>
-            <div class="message-data">
-              <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-              <span class="message-data-time">10:31 AM, Today</span>
-            </div>
-            <i class="fa fa-circle online"></i>
-            <i class="fa fa-circle online" style="color: #AED2A6"></i>
-          </li>-->
+            <!--<li>
+              <div class="message-data">
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                <span class="message-data-time">10:31 AM, Today</span>
+              </div>
+              <i class="fa fa-circle online"></i>
+              <i class="fa fa-circle online" style="color: #AED2A6"></i>
+              <i class="fa fa-circle online" style="color:#DAE9DA"></i>
+            </li>-->
 
-        </ul>
+          </ul>
 
-      </div> <!-- end chat-history -->
+        </div> <!-- end chat-history -->
+      </div>
 
+      <div class="sb_class">
+        <div class="chat-header clearfix" id="sb_avatar">
+          <img src="img/student2.png" alt="avatar" />
+
+          <div class="chat-about">
+            <div class="chat-with">Chat with 김수빈</div>
+            <div class="chat-num-messages">C언어 C++프로그래밍 가능합니다</div>
+          </div>
+          <i class="fa fa-star"></i>
+        </div> <!-- end chat-header -->
+        <div class="chat-history" id="sb_chat">
+          <ul>
+            <li class="clearfix">
+              <div class="message-data align-right">
+                <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
+                <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+
+              </div>
+              <div class="message other-message float-right">
+                안녕하세요 일물배우고싶어용
+              </div>
+            </li>
+
+            <li>
+              <div class="message-data">
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                <span class="message-data-time">10:12 AM, Today</span>
+              </div>
+              <div class="message my-message">
+                뿡빵뿡빵
+              </div>
+            </li>
+            <!--<li>
+              <div class="message-data">
+                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+                <span class="message-data-time">10:31 AM, Today</span>
+              </div>
+              <i class="fa fa-circle online"></i>
+              <i class="fa fa-circle online" style="color: #AED2A6"></i>
+            </li>-->
+
+          </ul>
+
+        </div> <!-- end chat-history -->
+      </div>
 
       <div class="chat-message clearfix">
         <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
@@ -250,13 +265,13 @@
       
     </div> <!-- end chat -->
     
-  </div> <!-- end container -->
+</div> <!-- end container -->
 
 <script id="message-template" type="text/x-handlebars-template">
   <li class="clearfix">
     <div class="message-data align-right">
       <span class="message-data-time" >{{time}}, Today</span> &nbsp; &nbsp;
-      <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
+      <span class="message-data-name" >Tricks</span> <i class="fa fa-circle me"></i>
     </div>
     <div class="message other-message float-right">
       {{messageOutput}}
@@ -267,7 +282,7 @@
 <script id="message-response-template" type="text/x-handlebars-template">
   <li>
     <div class="message-data">
-      <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+      <span class="message-data-name"><i class="fa fa-circle online"></i> 조경미</span>
       <span class="message-data-time">{{time}}, Today</span>
     </div>
     <div class="message my-message">
@@ -278,8 +293,11 @@
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js'></script>
-
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="app.js"></script>
+
+
 
 </body>
 </html>

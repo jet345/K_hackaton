@@ -1,14 +1,11 @@
 (function(){
-  $('#sb_avatar').hide();
+  $('.km_class').hide();
+  $('.sb_class').hide();
+  $('.chat-message clearfix').hide();
   var chat = {
     messageToSend: '',
     messageResponses: [
-      'Why did the web developer leave the restaurant? Because of the table layout.',
-      'How do you comfort a JavaScript bug? You console it.',
-      'An SQL query enters a bar, approaches two tables and asks: "May I join you?"',
-      'What is the most used language in programming? Profanity.',
-      'What is the object-oriented way to become wealthy? Inheritance.',
-      'An SEO expert walks into a bar, bars, pub, tavern, public house, Irish pub, drinks, beer, alcohol'
+      '이제야 봤네요ㅎㅎㅎ 화요일 4시반 부산대정문 파스쿠찌에서 봐요~'
     ],
     init: function() {
       this.cacheDOM();
@@ -98,19 +95,15 @@
   searchFilter.init();
 
   $('#sb').click(function(){
-    console.log('a');
-    $('#km_chat').hide();
-    $('#sb_chat').show();
-    $('#km_avatar').hide();
-    $('#sb_avatar').show();
+    $('#people-list').hide();
+    $('.sb_class').show();
+    $('.chat-message clearfix').show();
   });
 
   $('#km').click(function(){
-      console.log('a');
-      $('#sb_chat').hide();
-      $('#km_chat').show();
-      $('#sb_avatar').hide();
-      $('#km_avatar').show();
+    $('#people-list').hide();
+    $('.km_class').show();
+    $('.chat-message clearfix').show();
   });
 
 })();

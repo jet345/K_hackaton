@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #C5DDEB;
+
   font: 14px/20px "Lato", Arial, sans-serif;
   padding: 40px 0;
   color: white;
@@ -12,17 +12,23 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 750px;
-  background: #444753;
+  width: auto;
+
   border-radius: 5px;
 }
 
+.name {
+  color :black;
+}
+
 .people-list {
-  width: 260px;
-  float: left;
+  width: 100%;
+  position : relative;
+
 }
 .people-list .search {
   padding: 20px;
+  width: 100%;
 }
 .people-list input {
   border-radius: 3px;
@@ -59,7 +65,7 @@ body {
 }
 
 .chat {
-  width: 490px;
+  width: 100%;
   float: left;
   background: #F2F5F8;
   border-top-right-radius: 5px;
@@ -195,13 +201,22 @@ body {
 
 .float-right {
   float: right;
+  width : auto;
 }
+
+
 
 .clearfix:after {
   visibility: hidden;
   display: block;
   font-size: 0;
   content: " ";
+  background: #444753;
   clear: both;
   height: 0;
 }
+#km:hover{
+  opacity: 0.6;
+}
+
+
